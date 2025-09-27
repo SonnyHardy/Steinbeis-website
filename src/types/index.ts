@@ -1,4 +1,4 @@
-// Types globaux pour l'application Steinbeis
+// global types for Steinbeis
 export interface ServiceData {
   id: string;
   title: string;
