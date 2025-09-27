@@ -28,15 +28,15 @@ export default function Navigation() {
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-evenly">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Image
               src="/images/steinbeis-logo.png"
               alt="Steinbeis Beratungszentrum Logo"
-              width={200}
+              width={350}
               height={60}
-              className="h-12 w-auto"
+              className="h-16 w-auto"
               priority
             />
           </div>
@@ -59,7 +59,7 @@ export default function Navigation() {
           {/* Kontakt Button */}
           <div className="hidden md:block">
             <Button
-              variant="primary"
+              variant= {isScrolled ? 'primary' : 'secondary'}
               onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Kontakt
@@ -95,7 +95,7 @@ export default function Navigation() {
                 </a>
               ))}
               <Button
-                variant="primary"
+                  variant= {isScrolled ? 'primary' : 'secondary'}
                 onClick={() => {
                   document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' });
                   setIsMobileMenuOpen(false);

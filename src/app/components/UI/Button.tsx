@@ -19,7 +19,7 @@ export default function Button({
   className = '',
   disabled = false
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center gap-2 font-manrope font-medium rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseStyles = 'inline-flex items-center justify-center gap-2 font-manrope font-medium rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer';
 
   const variantStyles = {
     primary: 'bg-black text-white hover:bg-gray-800 focus:ring-gray-500 shadow-[var(--shadow-button)]',
