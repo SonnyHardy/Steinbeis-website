@@ -36,7 +36,7 @@ export default function Navigation() {
               alt="Steinbeis Beratungszentrum Logo"
               width={350}
               height={60}
-              className="h-16 w-auto"
+              className="h-24 w-56"
               priority
             />
           </div>
