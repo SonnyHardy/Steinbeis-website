@@ -18,7 +18,7 @@ export default function HeroSection() {
       </div>
 
       {/* Hauptinhalt */}
-      <div className="relative z-10 container mx-auto px-4 py-20 mb-16">
+      <div className="relative z-10 container mx-auto px-4 py-20 mb-20">
         <div className="max-w-4xl">
           {/* Haupttitel */}
           <h1 className="hero-title text-white mb-6">
@@ -43,33 +43,34 @@ export default function HeroSection() {
           </Button>
         </div>
 
-        {/* EUcert Siegel und Universität Logo am unteren Bereich */}
-        <div className="bottom-20 left-4 flex items-end space-x-8">
-          {/* EUcert Siegel */}
-          <div className="rounded-lg p-4">
-            <Image
-              src="/images/eucert-siegel.png"
-              alt="EUcert Zertifizierungssiegel"
-              width={120}
-              height={120}
-              className="w-48 h-48 md:w-36 md:h-36"
-            />
-          </div>
+          {/* EUcert Siegel und Universität Logo am unteren Bereich */}
+          <div className="flex flex-row items-center gap-2">
+            {/* EUcert Siegel */}
+            <div className="rounded-lg p-4">
+              <Image
+                  src="/images/eucert-siegel.png"
+                  alt="EUcert Zertifizierungssiegel"
+                  width={120}
+                  height={120}
+                  className="w-48 h-48 md:w-36 md:h-36"
+              />
+            </div>
 
-          {/* Universitäts-Info */}
-          <div className="text-white">
-            <Image
-                src="/images/members-area-screenshot.png"
-                alt="EUcert Zertifizierungssiegel"
-                width={200}
-                height={120}
-                className="w-48 h-20 md:w-48 md:h-20 rounded-lg"
-            />
-            <p className="font-manrope font-medium text-sm md:text-base mb-2">
-              Professur für Immobilienwirtschaft
-            </p>
-          </div>
+            {/* Universitäts-Info */}
+            <div>
+              <Image
+                  src="/images/members-area-screenshot.png"
+                  alt="EUcert Zertifizierungssiegel"
+                  width={200}
+                  height={120}
+                  className="w-48 h-20 md:w-48 md:h-20 rounded-lg mt-4"
+              />
+              <p className="text-white font-manrope font-medium text-xs md:text-xs mb-2 w-52 p-1">
+                Professur für Immobilienwirtschaft
+              </p>
+            </div>
         </div>
+
       </div>
     </section>
   );
