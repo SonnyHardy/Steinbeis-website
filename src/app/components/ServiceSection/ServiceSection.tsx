@@ -3,58 +3,59 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import { ServiceData } from '@/types';
+import {Button} from "@/app/components/UI";
+import {MoveRight} from "lucide-react";
 
 const servicesData: ServiceData[] = [
   {
     id: '1',
     title: 'Beratung in Bau- und Immobilienökonomie',
-    description: 'Umfassende Beratung für wirtschaftliche Entscheidungen im Bau- und Immobiliensektor. Von der Projektentwicklung bis zur Vermarktung unterstützen wir Sie mit fundierter Expertise.'
+    description: 'Sie benötigen fundierte Beratung für Ihre Bauprojekte oder Immobilieninvestitionen? Wir unterstützen Sie mit detaillierten Marktanalysen & strategischen Empfehlungen. '
   },
   {
     id: '2',
-    title: 'Risk Engineering und Lean Management',
-    description: 'Systematische Risikoanalyse und effiziente Prozessoptimierung für Ihre Bauprojekte. Minimieren Sie Risiken und maximieren Sie die Effizienz durch bewährte Methoden.'
+    title: 'Bauprojektmanagement',
+    description: 'Vom ersten Konzept bis hin zur Fertigstellung – wir übernehmen die Gesamtleitung Ihres Bauprojekts. Optimieren Sie Ihre Ressourcen und steigern Sie die Effizienz durch unser professionelles Projektmanagement.'
   },
   {
     id: '3',
     title: 'Immobilieninvestitionen und -bewertungen',
-    description: 'Professionelle Bewertung von Immobilien und fundierte Investitionsberatung. Wir analysieren Marktpotenziale und entwickeln tragfähige Investitionsstrategien.'
+    description: 'Mit präzisen Bewertungen und fundierten Marktanalysen maximieren Sie die Rentabilität Ihrer Immobilieninvestitionen. Wir bieten Ihnen eine umfassende Einschätzung der Werte und Potenziale Ihrer Objekte.'
   },
   {
     id: '4',
-    title: 'Bauprojektmanagement',
-    description: 'Vollständige Projektsteuerung von der Planung bis zur Fertigstellung. Termingerechte und kosteneffiziente Umsetzung Ihrer Bauvorhaben durch erfahrene Projektleiter.'
+    title: 'Gutachten und Sachverständigentätigkeit',
+    description: 'Als zertifizierte Sachverständige bieten wir Ihnen objektive Gutachten zu Wertermittlungen, Baukosten, Abrechnungen und Bauablaufstörungen.'
   },
   {
     id: '5',
-    title: 'Nachhaltigkeitsberatung',
-    description: 'Beratung für nachhaltiges und energieeffizientes Bauen. Entwicklung von Konzepten für umweltfreundliche und zukunftsorientierte Gebäude und Quartiere.'
+    title: 'Risk Engineering und Lean Management',
+    description: 'Unsere Experten helfen Ihnen, Risiken zu identifizieren und Ihre Bauprozesse effizient und nachhaltig zu gestalten – durch den Einsatz von Risk Engineering, Lean Management und IPD/IPA.'
   },
   {
     id: '6',
-    title: 'Gutachten und Sachverständigentätigkeit',
-    description: 'Unabhängige Sachverständigenleistungen und fundierte Gutachten für Immobilien. Zertifizierte Expertise für juristische und technische Fragestellungen.'
+    title: 'Nachhaltigkeitsberatung',
+    description: 'Wir beraten Sie zu nachhaltigem Bauen, Lebenszyklusanalysen, Ökobilanzierung und der Integration von ESG (Environmental, Social, Governance) in Ihre Bauprojekte.'
   }
 ];
 
 export default function ServiceSection() {
   return (
-    <section id="dienstleistungen" className="py-20 bg-white">
+    <section id="dienstleistungen" className="p-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Sektion Titel */}
-        <div className="text-center mb-16">
+        <div className="mb-16">
           <h2 className="module-title text-[var(--text-primary)] mb-6">
             Dienstleistungsangebot
           </h2>
-          <p className="font-albert-sans text-lg text-[var(--text-muted)] max-w-3xl mx-auto leading-relaxed">
-            Mit über 40 Jahren Erfahrung bieten wir Ihnen ein umfassendes Spektrum an Dienstleistungen
-            in der Bau- und Immobilienökonomie. Von der strategischen Beratung bis zur praktischen Umsetzung
-            stehen wir Ihnen als kompetenter Partner zur Seite.
+          <p className="font-albert-sans font-black text-lg text-[var(--text-muted)] max-w-xl leading-relaxed">
+            Wir bieten ein breites Spektrum an Dienstleistungen für Unternehmen
+            und Institutionen im Bau- und Immobilienbereich. Unsere Expertise umfasst:
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {servicesData.map((service) => (
             <ServiceCard
               key={service.id}
@@ -64,21 +65,17 @@ export default function ServiceSection() {
           ))}
         </div>
 
-        {/* CTA Bereich */}
-        <div className="text-center mt-16">
-          <p className="font-albert-sans text-[var(--text-muted)] mb-6">
-            Benötigen Sie eine maßgeschneiderte Lösung für Ihr Projekt?
-          </p>
-          <button
+        {/* CTA Button */}
+        <Button
+            variant="primary"
+            size="large"
             onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center gap-2 font-manrope font-medium text-[var(--color-secondary)] hover:text-[var(--text-primary)] transition-colors duration-200"
-          >
-            Jetzt unverbindlich beraten lassen
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </button>
-        </div>
+            className="mt-10"
+        >
+          Kontakt aufnehmen
+          <MoveRight />
+        </Button>
+
       </div>
     </section>
   );

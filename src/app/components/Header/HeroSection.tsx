@@ -52,7 +52,7 @@ export default function HeroSection() {
                   alt="EUcert Zertifizierungssiegel"
                   width={120}
                   height={120}
-                  className="w-48 h-48 md:w-36 md:h-36"
+                  className="w-32 h-32 md:w-36 md:h-36"
               />
             </div>
 

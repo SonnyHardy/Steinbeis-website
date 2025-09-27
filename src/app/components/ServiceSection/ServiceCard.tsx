@@ -12,11 +12,6 @@ export default function ServiceCard({ title, description, className = '' }: Serv
         <p className="font-albert-sans text-[var(--text-muted)] text-sm leading-relaxed flex-grow">
           {description}
         </p>
-        <div className="mt-6 pt-4 border-t border-[var(--border-light)]">
-          <span className="font-manrope font-medium text-[var(--color-secondary)] text-sm hover:text-[var(--text-primary)] transition-colors cursor-pointer">
-            Mehr erfahren →
-          </span>
-        </div>
       </div>
     </Card>
   );
