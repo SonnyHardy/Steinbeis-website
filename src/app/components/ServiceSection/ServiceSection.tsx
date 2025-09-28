@@ -70,10 +70,10 @@ export default function ServiceSection() {
             variant="primary"
             size="large"
             onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
-            className="mt-10"
+            className="mt-10 group"
         >
           Kontakt aufnehmen
-          <ArrowRight />
+          <ArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
         </Button>
 
       </div>

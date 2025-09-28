@@ -48,13 +48,13 @@ export default function ExpertSection() {
             </div>
 
             <Button
-                className="w-2/3"
+                className="w-2/3 group"
                 variant="primary"
                 size="large"
                 onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Mehr über Christoph Wagener
-              <ArrowRight />
+              <ArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
 
           </div>

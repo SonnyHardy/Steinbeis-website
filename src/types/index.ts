@@ -12,8 +12,7 @@ export interface StatData {
 }
 
 export interface ContactFormData {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   subject?: string;
   message: string;

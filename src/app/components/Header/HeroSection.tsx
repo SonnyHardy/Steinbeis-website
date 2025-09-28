@@ -36,10 +36,10 @@ export default function HeroSection() {
             variant="primary"
             size="large"
             onClick={() => document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })}
-            className="mb-12"
+            className="mb-12 group"
           >
             Jetzt Angebot einholen
-            <ArrowRight />
+            <ArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
           </Button>
         </div>
 
