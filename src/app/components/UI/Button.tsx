@@ -4,7 +4,7 @@ interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'tertiary';
   size?: 'small' | 'medium' | 'large';
   className?: string;
   disabled?: boolean;
@@ -23,7 +23,8 @@ export default function Button({
 
   const variantStyles = {
     primary: 'bg-black text-white hover:bg-gray-800 focus:ring-gray-500 shadow-[var(--shadow-button)]',
-    secondary: 'bg-white text-black border border-gray-300 hover:bg-gray-50 focus:ring-gray-300'
+    secondary: 'bg-white text-black border border-gray-300 hover:bg-gray-50',
+    tertiary: 'bg-white text-[#4991A5] border border-[#4991A5] hover:bg-black/2'
   };
 
   const sizeStyles = {

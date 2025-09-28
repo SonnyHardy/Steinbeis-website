@@ -24,7 +24,6 @@ export interface ImageTextModuleProps {
   description: string;
   imageSrc: string;
   imageAlt: string;
-  buttonText: string;
   reversed?: boolean;
   backgroundColor?: string;
 }

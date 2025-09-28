@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '../UI';
-import {MoveRight} from "lucide-react";
+import {ArrowRight} from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -39,7 +39,7 @@ export default function HeroSection() {
             className="mb-12"
           >
             Jetzt Angebot einholen
-            <MoveRight />
+            <ArrowRight />
           </Button>
         </div>
 

@@ -4,7 +4,7 @@ import React from 'react';
 import ServiceCard from './ServiceCard';
 import { ServiceData } from '@/types';
 import {Button} from "@/app/components/UI";
-import {MoveRight} from "lucide-react";
+import {ArrowRight} from "lucide-react";
 
 const servicesData: ServiceData[] = [
   {
@@ -73,7 +73,7 @@ export default function ServiceSection() {
             className="mt-10"
         >
           Kontakt aufnehmen
-          <MoveRight />
+          <ArrowRight />
         </Button>
 
       </div>
