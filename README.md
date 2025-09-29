@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Steinbeis Beratungszentrum Website
 
-## Getting Started
+Professional website for **Steinbeis Beratungszentrum Bau- und Immobilienökonomie** (Steinbeis Consulting Center for Construction and Real Estate Economics), developed with Next.js 15.5.4 and TypeScript.
 
-First, run the development server:
+## 🎯 Project Overview
+
+This modern web application showcases the construction and real estate economics consulting services of Steinbeis center. The site is based on a professional Figma design and implements a modular architecture with reusable TypeScript components.
+
+
+## 🛠 Technical Stack
+
+- **Framework:** Next.js 15.5.4 with App Router
+- **Language:** TypeScript with strict mode
+- **Styling:** Tailwind CSS v4 with PostCSS
+- **Fonts:** Geist (Geist Sans and Geist Mono) + Google Fonts
+- **Build:** Turbopack for development and production
+- **Components:** Modular architecture with TypeScript interfaces
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ recommended
+- npm, yarn, pnpm or bun
+
+### Installation and Launch
 
 ```bash
+# Clone the project
+git clone <repository-url>
+cd steinbeis
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Development server with Turbopack
+npm run build    # Production build with Turbopack
+npm start        # Production server
+npm run lint     # ESLint linter
+```
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── Header/              # Navigation and Hero Section
+│   │   ├── ServiceSection/      # Services offered
+│   │   ├── StatsSection/        # Steinbeis statistics
+│   │   ├── ExpertSection/       # Expert presentation
+│   │   ├── CertificatSection/   # Certifications
+│   │   ├── ImageTextModules/    # Image/text modules
+│   │   ├── ContactSection/      # Contact form
+│   │   ├── Footer/              # Footer
+│   │   └── UI/                  # Reusable UI components
+│   ├── globals.css              # Global styles and CSS variables
+│   ├── layout.tsx               # Main layout
+│   └── page.tsx                 # Homepage
+├── types/
+│   └── index.ts                 # Global TypeScript types
+└── guidelines.md                # Detailed project specifications
+```
